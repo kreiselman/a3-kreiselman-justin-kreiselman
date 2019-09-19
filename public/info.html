@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 3</title>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- importing css for website styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel = "stylesheet"
+   type = "text/css"
+   href = "css/style.css" />
+    
+  </head>
+  <body>
+    
+    <h1>
+      Enter the name, class year and height of your fellow classmates.
+    </h1>
+    
+    
+    <div class="input">
+      
+      
+      <div class = "into justify-content-md-left">
+        
+        
+      
+    <!-- Input fields and submit button -->
+    <form id = "info" action="/submit" method = "POST">
+      <input class = "form-control" type="text" name="yourname" placeholder="your name here"><br>
+      <input class = "form-control" type ="number" id = "num" name="classyear" min = "1990" max = "3000"  placeholder="class year"><br>
+      <input class = "form-control" type = "text" name="height" placeholder="Your height in inches"><br>
+      
+    </form>
+    <button id = "submit" class = "inputbutton" onclick = "submit()">submit</button><br><br>
+    </div>
+    </div>
+    
+    <!-- Delete field and delete button -->
+    <form id = "delete" action = "/delete" method = "POST">
+      <input class = "form-control" type = "text" name = "delName" placeholder = "Name to delete"><br>
+      <button id = "deleteBtn" class = "inputbutton" onclick = "onDelete()">delete</button><br><br>
+    </form>
+    
+    <!-- Data table with student info -->
+    <table id = "dataTable">
+      <th>Name</th>
+      <th>ClassYear</th>
+      <th> Height in inches</th>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  
+  <!-- jquery import -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    console.log("hello")
+    window.onload = function()
+    {
+      getData()
+    }
+  </script>
+  
+  <!-- js import for server client interaction -->
+  <script src="js/scripts.js"></script>
+</html>
